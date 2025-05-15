@@ -9,7 +9,7 @@ import {
 } from "@clerk/nextjs";
 import { Geist, Geist_Mono } from "next/font/google";
 import "../globals.css";
-import Header from "@/components/header";
+import Header from "@/components/header/header";
 import {
   Sidebar,
   SidebarInset,

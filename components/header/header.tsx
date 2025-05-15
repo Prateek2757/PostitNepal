@@ -7,11 +7,11 @@ import {
   UserButton,
   useUser,
 } from "@clerk/nextjs";
-import PostIt from "../images/PostIt_Nepal.png";
-import { Button } from "./ui/button";
+import PostIt from "../../images/PostIt_Nepal.png";
+import { Button } from "../ui/button";
 import Image from "next/image";
 import {  ChevronLeftIcon, MenuIcon } from "lucide-react";
-import { useSidebar } from "./ui/sidebar";
+import { useSidebar } from "../ui/sidebar";
 
 const Header = () => {
   const { user } = useUser();
