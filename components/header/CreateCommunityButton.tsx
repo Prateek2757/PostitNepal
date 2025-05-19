@@ -15,7 +15,7 @@ import { Input } from "../ui/input";
 import { Textarea } from "../ui/textarea";
 import Image from "next/image";
 import { Button } from "../ui/button";
-//import { createCommunity } from "@/action/createCommunity";
+import { createCommunity } from "@/action/createCommunity";
 import { useRouter } from "next/navigation";
 
 function CreateCommunityButton() {
@@ -115,7 +115,7 @@ function CreateCommunityButton() {
           fileType = imageFile.type;
          
           
-        }
+        } 
       
         
 
