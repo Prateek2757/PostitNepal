@@ -25,9 +25,9 @@ function CommentInput({
       try {
         const result = await createComment(postId, content, parentCommentId);
 
-        if (result.error) {
+        if (result?.error) {
           console.error("Error adding comment:", result.error);
-        } else {
+        } else if (result) {
           // Clear input after successful submission
           setContent("");
         }

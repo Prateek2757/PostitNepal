@@ -5,16 +5,17 @@ import {
   SignedOut,
   SignInButton,
   UserButton,
-  useUser,
+
 } from "@clerk/nextjs";
 import PostIt from "../../images/PostIt_Nepal.png";
 import { Button } from "../ui/button";
 import Image from "next/image";
 import {  ChevronLeftIcon, MenuIcon } from "lucide-react";
 import { useSidebar } from "../ui/sidebar";
+import CreatePost from "../post/CreatePost";
 
 const Header = () => {
-  const { user } = useUser();
+
   const { toggleSidebar, open, isMobile } = useSidebar();
   return (
     <header className="flex p-4 border-b border-gray-200 justify-between items-center">
@@ -37,7 +38,8 @@ const Header = () => {
       </div>
       {/* rightside */}
 
-      <div>
+      <div className="flex items-center gap-2">
+        <CreatePost/>
         <SignedIn>
           <UserButton />
         </SignedIn>

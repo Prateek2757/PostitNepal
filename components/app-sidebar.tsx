@@ -25,6 +25,7 @@ import Image from "next/image";
 import { getSubreddits } from "@/sanity/lib/subreadit/getSubreddits";
 import CreateCommunityButton from "./header/CreateCommunityButton";
 
+
 type SidebarData = {
   navMain: {
     title: string;
@@ -36,6 +37,8 @@ type SidebarData = {
     }[];
   }[];
 };
+
+
 
 // This is sample data.
 
@@ -52,8 +55,8 @@ export async function AppSidebar({
         title: "Communities",
         url: "#",
         items:
-          subreadits?.map((subreddit) => ({
-            title: subreddit.title || "unknown",
+          subreadits?.map((subreddit: { title: string; slug: string | null }) => ({
+            title: subreddit.title  || "unknown",
             url: `/community/${subreddit.slug}`,
             isActive: false,
           })) || [],

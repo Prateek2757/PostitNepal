@@ -61,7 +61,7 @@ async function Comment({
             </span>
           </div>
 
-          <p className="text-gray-700 leading-relaxed">{comment.content}</p>
+          <p className="text-gray-700  leading-relaxed">{comment.content}</p>
 
           <CommentReply postId={postId} comment={comment} />
 
